@@ -1,6 +1,10 @@
-[gd_scene format=3 uid="uid://dmofbpejoilpo"]
+[gd_scene load_steps=3 format=3 uid="uid://dmofbpejoilpo"]
+
+[ext_resource type="Script" uid="uid://cs4bujct5su7d" path="res://scenes/start_menu.gd" id="1_ouf4f"]
+[ext_resource type="PackedScene" uid="uid://1qxi58usgg3m" path="res://scenes/1259.tscn" id="2_thu50"]
 
 [node name="StartMenu" type="Node2D"]
+script = ExtResource("1_ouf4f")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -20,11 +24,7 @@ offset_bottom = 537.0
 theme_override_font_sizes/font_size = 32
 text = "Press Any Key"
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -649.0
-offset_top = -373.0
-offset_right = 669.0
-offset_bottom = 414.0
-color = Color(0.172833, 0.172833, 0.172833, 1)
-
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="1259" parent="." instance=ExtResource("2_thu50")]
+position = Vector2(-16, 4)
