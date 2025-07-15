@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dmofbpejoilpo"]
+
+[node name="StartMenu" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 422.0
+offset_top = 44.0
+offset_right = 766.0
+offset_bottom = 132.0
+theme_override_font_sizes/font_size = 64
+text = "Start Menu"
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 490.0
+offset_top = 484.0
+offset_right = 712.0
+offset_bottom = 537.0
+theme_override_font_sizes/font_size = 32
+text = "Press Any Key"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -649.0
+offset_top = -373.0
+offset_right = 669.0
+offset_bottom = 414.0
+color = Color(0.172833, 0.172833, 0.172833, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
