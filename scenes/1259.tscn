@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=4 uid="uid://1qxi58usgg3m"]
+[gd_scene load_steps=7 format=4 uid="uid://1qxi58usgg3m"]
 
+[ext_resource type="Script" uid="uid://dphglphfq3cs6" path="res://scenes/1259.gd" id="1_6y46x"]
 [ext_resource type="Texture2D" uid="uid://lj1f6b38m373" path="res://assets/CP_V1.0.4.png" id="1_ix2oe"]
 [ext_resource type="PackedScene" uid="uid://c2gt0o6tkfjo" path="res://scenes/player.tscn" id="2_vd0wn"]
+[ext_resource type="Script" uid="uid://dgys7kkt45n3p" path="res://scenes/pause_menu.gd" id="4_48uhi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vd0wn"]
 texture = ExtResource("1_ix2oe")
@@ -401,6 +403,7 @@ texture = ExtResource("1_ix2oe")
 sources/0 = SubResource("TileSetAtlasSource_vd0wn")
 
 [node name="1259" type="Node2D"]
+script = ExtResource("1_6y46x")
 
 [node name="Layer0" type="TileMapLayer" parent="."]
 texture_filter = 1
@@ -419,3 +422,43 @@ position = Vector2(-99, 1)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(4, 4)
+
+[node name="PauseMenu" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+script = ExtResource("4_48uhi")
+
+[node name="ColorRect" type="ColorRect" parent="PauseMenu"]
+offset_right = 1159.0
+offset_bottom = 638.0
+color = Color(0.0980392, 0.0980392, 0.0980392, 0.286275)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -265.5
+offset_top = -63.5
+offset_right = 265.5
+offset_bottom = 63.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="continue" type="Button" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+text = "Continue"
+
+[node name="settings" type="Button" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Settings"
+
+[node name="quit" type="Button" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Quit"
+
+[connection signal="pressed" from="PauseMenu/VBoxContainer/continue" to="PauseMenu" method="_on_button_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/quit" to="PauseMenu" method="_on_quit_pressed"]

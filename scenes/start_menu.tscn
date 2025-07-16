@@ -6,9 +6,9 @@
 [node name="StartMenu" type="Node2D"]
 script = ExtResource("1_ouf4f")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="StartMenu" type="CanvasLayer" parent="."]
 
-[node name="Label" type="Label" parent="CanvasLayer"]
+[node name="Label" type="Label" parent="StartMenu"]
 offset_left = 422.0
 offset_top = 44.0
 offset_right = 766.0
@@ -16,7 +16,7 @@ offset_bottom = 132.0
 theme_override_font_sizes/font_size = 64
 text = "Start Menu"
 
-[node name="Button" type="Button" parent="CanvasLayer"]
+[node name="Button" type="Button" parent="StartMenu"]
 offset_left = 490.0
 offset_top = 484.0
 offset_right = 712.0
