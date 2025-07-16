@@ -28,3 +28,4 @@ text = "Press Any Key"
 
 [node name="1259" parent="." instance=ExtResource("2_thu50")]
 position = Vector2(-16, 4)
+script = null

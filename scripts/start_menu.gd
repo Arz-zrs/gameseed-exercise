@@ -10,6 +10,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	## if any key is pressed start the game
 	if Input.is_anything_pressed():
-		get_tree().change_scene_to_file("res://scenes/1259.tscn")
+		$StartMenu.visible = false
+		TransitionAnimation.change_scene("res://scenes/1259.tscn")
 	
 	pass
