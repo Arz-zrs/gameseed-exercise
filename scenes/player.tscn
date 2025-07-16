@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://c2gt0o6tkfjo"]
 
-[ext_resource type="Script" uid="uid://b6w7d10gxe2x4" path="res://character_body_2d.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://b6w7d10gxe2x4" path="res://scripts/character_body_2d.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://b5qt5huyeq3bb" path="res://assets/char_a_p1_0bas_humn_v00.png" id="2_qhqgy"]
 
 [sub_resource type="Animation" id="Animation_qlg0r"]
