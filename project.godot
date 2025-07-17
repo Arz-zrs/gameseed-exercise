@@ -17,12 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-TransitionAnimation="*res://scenes/transition_animation.tscn"
-
-[display]
-
-window/size/viewport_width=640
-window/size/viewport_height=360
+TransitionAnimation="*res://tscn/transition_animation.tscn"
 
 [dotnet]
 

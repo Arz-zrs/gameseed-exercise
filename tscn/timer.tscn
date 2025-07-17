@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b71j18u1ic1uo"]
 
-[ext_resource type="Script" uid="uid://ce1j0o84qjunf" path="res://script/timer.gd" id="1_oh07i"]
+[ext_resource type="Script" uid="uid://ce1j0o84qjunf" path="res://scripts/timer.gd" id="1_oh07i"]
 
 [node name="timer" type="Timer"]
 wait_time = 10.0

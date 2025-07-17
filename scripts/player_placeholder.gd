@@ -15,10 +15,10 @@ func _ready() -> void:
 		add_child(item)
 	
 	# Add item and save functionality [CURRENTLY FOR DEBUGGING PURPOSES ONLY]
-	#inventory.items[0] = brass
-	#inventory.items[1] = battery
-	##var brass_watch = inventory.items[0].instantiate()
-	##add_child(brass_watch)
-	#ResourceSaver.save(inventory, "res://player_inventory.tres")
+	inventory.items[0] = brass
+	inventory.items[1] = battery
+	#var brass_watch = inventory.items[0].instantiate()
+	#add_child(brass_watch)
+	ResourceSaver.save(inventory, "res://player_inventory.tres")
 	
 	print(inventory.items)
