@@ -19,6 +19,15 @@ config/icon="res://icon.svg"
 
 TransitionAnimation="*res://scenes/transition_animation.tscn"
 
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=360
+
+[dotnet]
+
+project/assembly_name="gameseed-simulation"
+
 [input]
 
 up={
