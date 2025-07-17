@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://dwmuh0abmqnup"]
+
+[ext_resource type="Script" uid="uid://cw108ltws4ei0" path="res://tscn/player_placeholder.gd" id="1_dc5ib"]
+[ext_resource type="PackedScene" uid="uid://b71j18u1ic1uo" path="res://tscn/timer.tscn" id="2_p34ry"]
+[ext_resource type="PackedScene" uid="uid://j2nhqognppyp" path="res://tscn/inventory_bar.tscn" id="3_16kyk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8oxff"]
+radius = 17.0294
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_dc5ib"]
+
+[node name="player_placeholder" type="CharacterBody2D"]
+script = ExtResource("1_dc5ib")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8oxff")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(36, 34)
+texture = SubResource("PlaceholderTexture2D_dc5ib")
+
+[node name="ingame_ui" type="CanvasLayer" parent="."]
+
+[node name="inventory_bar" parent="ingame_ui" instance=ExtResource("3_16kyk")]
+
+[node name="timer" parent="ingame_ui" instance=ExtResource("2_p34ry")]
+
+[node name="Camera2D" type="Camera2D" parent="."]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwdhbmyi7gj6u"]
+
+[ext_resource type="Script" uid="uid://ccmbsdrdlkipu" path="res://script/battery.gd" id="1_ecwm7"]
+[ext_resource type="Texture2D" uid="uid://dc6j1y0o2tb51" path="res://assets/Items/40 Random Items/MilkBox.png" id="2_8gbdy"]
+
+[node name="battery" type="Node"]
+script = ExtResource("1_ecwm7")
+sprite = ExtResource("2_8gbdy")
