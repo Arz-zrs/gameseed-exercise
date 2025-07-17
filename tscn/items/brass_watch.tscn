@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://v3roywvt1vyj"]
+
+[ext_resource type="Script" uid="uid://bqc1x2dqoeoxw" path="res://script/brass_watch.gd" id="1_2n7qm"]
+[ext_resource type="Texture2D" uid="uid://llfnmtbxvet4" path="res://assets/Items/40 Random Items/Clock.png" id="1_ibao5"]
+
+[node name="brass_watch" type="Node"]
+script = ExtResource("1_2n7qm")
+sprite = ExtResource("1_ibao5")
+
+[node name="duration" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+texture_filter = 2
+offset_left = 1.0
+offset_top = 38.0
+offset_right = 41.0
+offset_bottom = 61.0
+theme_override_colors/font_color = Color(0.405429, 0.825096, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "XY"
+
+[connection signal="timeout" from="duration" to="." method="_on_duration_timeout"]
