@@ -7,8 +7,6 @@ func _ready() -> void:
 	
 	if ItemManager.pieces > 0:
 		$Pieces.queue_free()
-	
-	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,5 +15,3 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("pause"):
 		$PauseMenu.visible = true
 		get_tree().paused = true
-	
-	pass

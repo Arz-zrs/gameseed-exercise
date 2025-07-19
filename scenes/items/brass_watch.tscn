@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://v3roywvt1vyj"]
 
-[ext_resource type="Script" uid="uid://bqc1x2dqoeoxw" path="res://scripts/brass_watch.gd" id="1_5f46m"]
+[ext_resource type="Script" uid="uid://bqc1x2dqoeoxw" path="res://scripts/component/brass_watch.gd" id="1_5f46m"]
 [ext_resource type="Texture2D" uid="uid://llfnmtbxvet4" path="res://assets/Items/40 Random Items/Clock.png" id="2_dtb4k"]
 
 [node name="brass_watch" type="Node"]
@@ -12,6 +12,7 @@ wait_time = 3.0
 one_shot = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 texture_filter = 2

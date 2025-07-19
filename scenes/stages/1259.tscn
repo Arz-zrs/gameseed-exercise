@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dphglphfq3cs6" path="res://scripts/1259.gd" id="1_6y46x"]
 [ext_resource type="Texture2D" uid="uid://lj1f6b38m373" path="res://assets/textures/city_demo.png" id="1_ix2oe"]
 [ext_resource type="PackedScene" uid="uid://c2gt0o6tkfjo" path="res://scenes/player/player.tscn" id="2_vd0wn"]
-[ext_resource type="Script" uid="uid://dgys7kkt45n3p" path="res://scripts/pause_menu.gd" id="4_48uhi"]
+[ext_resource type="Script" uid="uid://dgys7kkt45n3p" path="res://scripts/component/pause_menu.gd" id="4_48uhi"]
 [ext_resource type="PackedScene" uid="uid://ds5bkf4t0kixr" path="res://scenes/items/laprak_piece.tscn" id="5_mpo5v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vd0wn"]
