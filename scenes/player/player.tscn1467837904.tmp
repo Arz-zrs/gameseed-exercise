@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://c2gt0o6tkfjo"]
+[gd_scene load_steps=13 format=3 uid="uid://c2gt0o6tkfjo"]
 
 [ext_resource type="Script" uid="uid://b6w7d10gxe2x4" path="res://scripts/character_body_2d.gd" id="1_u4c7w"]
-[ext_resource type="Texture2D" uid="uid://b5qt5huyeq3bb" path="res://assets/char_a_p1_0bas_humn_v00.png" id="2_6sl1v"]
-[ext_resource type="PackedScene" uid="uid://j2nhqognppyp" path="res://tscn/inventory_bar.tscn" id="3_hsluc"]
-[ext_resource type="PackedScene" uid="uid://b71j18u1ic1uo" path="res://tscn/timer.tscn" id="4_1q7bi"]
+[ext_resource type="Texture2D" uid="uid://b5qt5huyeq3bb" path="res://assets/textures/player_demo.png" id="2_6sl1v"]
+[ext_resource type="PackedScene" uid="uid://j2nhqognppyp" path="res://scenes/player/inventory_bar.tscn" id="3_hsluc"]
+[ext_resource type="Script" uid="uid://e5etceeiv2st" path="res://scripts/component/player_inventory.gd" id="3_p47bc"]
+[ext_resource type="PackedScene" uid="uid://b71j18u1ic1uo" path="res://scenes/timer.tscn" id="4_1q7bi"]
 
 [sub_resource type="Animation" id="Animation_qlg0r"]
 length = 0.001
@@ -113,6 +114,7 @@ libraries = {
 }
 
 [node name="ingame_ui" type="CanvasLayer" parent="."]
+script = ExtResource("3_p47bc")
 
 [node name="inventory_bar" parent="ingame_ui" instance=ExtResource("3_hsluc")]
 
