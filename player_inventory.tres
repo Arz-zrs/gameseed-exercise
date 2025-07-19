@@ -1,8 +1,8 @@
-[gd_resource type="Resource" script_class="PlayerInventory" load_steps=4 format=3 uid="uid://djet6b482dmg6"]
+[gd_resource type="Resource" script_class="PlayerInventory" load_steps=4 format=3]
 
-[ext_resource type="PackedScene" uid="uid://v3roywvt1vyj" path="res://tscn/items/brass_watch.tscn" id="1_ar22a"]
-[ext_resource type="PackedScene" uid="uid://cwdhbmyi7gj6u" path="res://tscn/items/battery.tscn" id="2_733ln"]
-[ext_resource type="Script" uid="uid://b350j0stsc52r" path="res://resource/player_inventory.gd" id="3_3xkqy"]
+[ext_resource type="PackedScene" path="res://scenes/items/brass_watch.tscn" id="1_ar22a"]
+[ext_resource type="PackedScene" path="res://scenes/items/battery.tscn" id="2_733ln"]
+[ext_resource type="Script" path="res://scripts/resource/player_inventory.gd" id="3_3xkqy"]
 
 [resource]
 script = ExtResource("3_3xkqy")

@@ -8,8 +8,8 @@ const JUMP_VELOCITY = -400.0
 var inventory : PlayerInventory = ResourceLoader.load("res://player_inventory.tres").duplicate(true)
 
 # for debug
-var brass = load("res://tscn/items/brass_watch.tscn")
-var battery = load("res://tscn/items/battery.tscn")
+var brass = load("res://scenes/items/brass_watch.tscn")
+var battery = load("res://scenes/items/battery.tscn")
 
 func _ready() -> void:
 	
@@ -52,7 +52,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_timer_timeout() -> void:
-	TransitionAnimation.change_scene("res://tscn/1259.tscn")
+	TransitionAnimation.change_scene("res://scenes/stages/1259.tscn")
 	pass # Replace with function body.
 
 

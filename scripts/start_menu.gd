@@ -13,6 +13,6 @@ func _process(delta: float) -> void:
 	## if any key is pressed start the game
 	if Input.is_anything_pressed():
 		$StartMenu.visible = false
-		TransitionAnimation.change_scene("res://tscn/1259.tscn")
+		TransitionAnimation.change_scene("res://scenes/stages/1259.tscn")
 	
 	pass
