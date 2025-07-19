@@ -12,6 +12,9 @@ var brass = load("res://tscn/items/brass_watch.tscn")
 var battery = load("res://tscn/items/battery.tscn")
 
 func _ready() -> void:
+	
+	$ingame_ui/Label.text = "Pieces : " + str(ItemManager.pieces)
+	
 	# Load items from the inventory into the player scene
 	for item_idx in inventory.items:
 		var item = inventory.items[item_idx].instantiate() as Item
@@ -19,8 +22,8 @@ func _ready() -> void:
 		add_child(item)
 	
 	# Add item and save functionality [CURRENTLY FOR DEBUGGING PURPOSES ONLY]
-	inventory.items[0] = brass
-	inventory.items[1] = battery
+	#inventory.items[0] = brass
+	#inventory.items[1] = battery
 	#var brass_watch = inventory.items[0].instantiate()
 	#add_child(brass_watch)
 	ResourceSaver.save(inventory, "res://player_inventory.tres")
@@ -46,3 +49,18 @@ func _physics_process(delta: float) -> void:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 	
 	move_and_slide()
+
+
+func _on_timer_timeout() -> void:
+	TransitionAnimation.change_scene("res://tscn/1259.tscn")
+	pass # Replace with function body.
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	ItemManager.pieces += 1
+	$ingame_ui/Label.text = "Pieces : " + str(ItemManager.pieces)
+	get_parent().get_node("Pieces").queue_free()
+	inventory.pieces += 1
+	
+	ResourceSaver.save(inventory, "res://player_inventory.tres")
+	pass # Replace with function body.

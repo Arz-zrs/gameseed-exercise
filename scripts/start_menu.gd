@@ -4,6 +4,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$"1259/Player".get_node("ingame_ui").visible = false
+	$"1259/Player/ingame_ui/timer/Label".visible = false
 	pass # Replace with function body.
 
 

@@ -17,7 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-TransitionAnimation="*res://tscn/transition_animation.tscn"
+TransitionAnimation="*res://autoload/transition_animation.tscn"
+ItemManager="*res://autoload/itemManager.gd"
 
 [dotnet]
 

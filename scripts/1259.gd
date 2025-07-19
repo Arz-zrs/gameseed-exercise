@@ -5,6 +5,9 @@ extends Node2D
 func _ready() -> void:
 	$Player.get_node("ingame_ui/timer").start()
 	
+	if ItemManager.pieces > 0:
+		$Pieces.queue_free()
+	
 	pass # Replace with function body.
 
 
@@ -14,4 +17,5 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("pause"):
 		$PauseMenu.visible = true
 		get_tree().paused = true
+	
 	pass
