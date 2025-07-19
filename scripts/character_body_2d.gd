@@ -22,8 +22,8 @@ func _ready() -> void:
 		add_child(item)
 	
 	# Add item and save functionality [CURRENTLY FOR DEBUGGING PURPOSES ONLY]
-	inventory.items[0] = brass
-	inventory.items[1] = battery
+	#inventory.items[0] = brass
+	#inventory.items[1] = battery
 	#var brass_watch = inventory.items[0].instantiate()
 	#add_child(brass_watch)
 	ResourceSaver.save(inventory, "res://player_inventory.tres")
@@ -57,8 +57,10 @@ func _on_timer_timeout() -> void:
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	print("Hit")
 	ItemManager.pieces += 1
 	$ingame_ui/Label.text = "Pieces : " + str(ItemManager.pieces)
 	get_parent().get_node("Pieces").queue_free()
+	inventory.pieces += 1
+	
+	ResourceSaver.save(inventory, "res://player_inventory.tres")
 	pass # Replace with function body.
