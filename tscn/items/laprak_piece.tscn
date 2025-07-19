@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ds5bkf4t0kixr"]
+
+[ext_resource type="Texture2D" uid="uid://dmp8fc3qqj432" path="res://assets/Items/40 Random Items/OldBook.png" id="1_f1wwx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pnhm8"]
+radius = 5.0
+height = 10.0
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_f1wwx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_pnhm8")

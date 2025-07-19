@@ -93,9 +93,9 @@ _data = {
 &"walk_up": SubResource("Animation_tuyoq")
 }
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oprun"]
-radius = 4.0
-height = 22.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u4c7w"]
+radius = 5.0
+height = 26.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_u4c7w")
@@ -112,14 +112,29 @@ libraries = {
 &"": SubResource("AnimationLibrary_ur7pv")
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_oprun")
-
 [node name="ingame_ui" type="CanvasLayer" parent="."]
 
 [node name="inventory_bar" parent="ingame_ui" instance=ExtResource("3_hsluc")]
 
 [node name="timer" parent="ingame_ui" instance=ExtResource("4_1q7bi")]
 autostart = false
+
+[node name="Label" type="Label" parent="ingame_ui"]
+offset_left = 3.0
+offset_top = 139.0
+offset_right = 336.0
+offset_bottom = 226.0
+theme_override_font_sizes/font_size = 34
+text = "Pieces : 0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1)
+shape = SubResource("CapsuleShape2D_u4c7w")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, -1)
+shape = SubResource("CapsuleShape2D_u4c7w")
 
 [connection signal="timeout" from="ingame_ui/timer" to="." method="_on_timer_timeout"]

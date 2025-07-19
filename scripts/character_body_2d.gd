@@ -12,6 +12,9 @@ var brass = load("res://tscn/items/brass_watch.tscn")
 var battery = load("res://tscn/items/battery.tscn")
 
 func _ready() -> void:
+	
+	$ingame_ui/Label.text = "Pieces : " + str(ItemManager.pieces)
+	
 	# Load items from the inventory into the player scene
 	for item_idx in inventory.items:
 		var item = inventory.items[item_idx].instantiate() as Item
@@ -50,4 +53,12 @@ func _physics_process(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	TransitionAnimation.change_scene("res://tscn/1259.tscn")
+	pass # Replace with function body.
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	print("Hit")
+	ItemManager.pieces += 1
+	$ingame_ui/Label.text = "Pieces : " + str(ItemManager.pieces)
+	get_parent().get_node("Pieces").queue_free()
 	pass # Replace with function body.
