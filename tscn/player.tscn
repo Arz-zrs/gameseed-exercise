@@ -121,3 +121,5 @@ shape = SubResource("CapsuleShape2D_oprun")
 
 [node name="timer" parent="ingame_ui" instance=ExtResource("4_1q7bi")]
 autostart = false
+
+[connection signal="timeout" from="ingame_ui/timer" to="." method="_on_timer_timeout"]

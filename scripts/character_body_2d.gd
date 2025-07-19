@@ -46,3 +46,8 @@ func _physics_process(delta: float) -> void:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 	
 	move_and_slide()
+
+
+func _on_timer_timeout() -> void:
+	TransitionAnimation.change_scene("res://tscn/1259.tscn")
+	pass # Replace with function body.
