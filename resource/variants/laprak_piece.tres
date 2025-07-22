@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="InteractableResource" load_steps=3 format=3 uid="uid://div1nor5lcpe4"]
+
+[ext_resource type="Script" uid="uid://daux24l4gjfs4" path="res://resource/interactable.gd" id="1_mpbuv"]
+[ext_resource type="Texture2D" uid="uid://blycyc7alw3vj" path="res://assets/Items/40 Random Items/IdCard.png" id="2_dg4jd"]
+
+[resource]
+script = ExtResource("1_mpbuv")
+name = "Laprak piece"
+sprite = ExtResource("2_dg4jd")
+texts = Array[String]([])
+isObjective = true
+metadata/_custom_type_script = "uid://daux24l4gjfs4"
