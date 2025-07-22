@@ -1,13 +1,27 @@
+<<<<<<< Updated upstream
 [gd_resource type="Resource" script_class="PlayerInventory" load_steps=4 format=3 uid="uid://bdfbb1260mx0r"]
 
 [ext_resource type="PackedScene" uid="uid://v3roywvt1vyj" path="res://scenes/items/brass_watch.tscn" id="1_ar22a"]
 [ext_resource type="PackedScene" uid="uid://cwdhbmyi7gj6u" path="res://scenes/items/battery.tscn" id="2_733ln"]
 [ext_resource type="Script" uid="uid://b350j0stsc52r" path="res://scripts/component/player_inventory.gd" id="3_3xkqy"]
+=======
+[gd_resource type="Resource" script_class="PlayerInventory" load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://tscn/items/brass_watch.tscn" id="1_ar22a"]
+[ext_resource type="PackedScene" path="res://tscn/items/battery.tscn" id="2_733ln"]
+[ext_resource type="Script" path="res://resource/player_inventory.gd" id="3_3xkqy"]
+>>>>>>> Stashed changes
 
 [resource]
 script = ExtResource("3_3xkqy")
 items = {
-0: ExtResource("1_ar22a"),
-1: ExtResource("2_733ln")
+0: {
+"item": ExtResource("1_ar22a"),
+"name": "brass"
+},
+1: {
+"item": ExtResource("2_733ln"),
+"name": "battery"
+}
 }
 pieces = 0
