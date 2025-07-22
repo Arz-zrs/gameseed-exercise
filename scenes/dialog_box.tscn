@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://cavtn84fq1w4e"]
+
+[ext_resource type="Script" path="res://scripts/component/dialog_box.gd" id="1_ha528"]
+
+[node name="dialog_box" type="Panel" groups=["dialog_box"]]
+visible = false
+offset_left = 143.0
+offset_top = 295.0
+offset_right = 1008.0
+offset_bottom = 604.0
+script = ExtResource("1_ha528")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 2
+layout_mode = 0
+offset_left = 10.0
+offset_top = 7.0
+offset_right = 858.0
+offset_bottom = 283.0
+theme_override_font_sizes/font_size = 24
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 675.0
+offset_top = 280.0
+offset_right = 855.0
+offset_bottom = 303.0
+text = "Press Enter to continue"

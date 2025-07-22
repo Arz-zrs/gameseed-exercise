@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="InteractableResource" load_steps=3 format=3 uid="uid://bkr5sdulqobqi"]
+
+[ext_resource type="Script" path="res://scripts/resource/interactable.gd" id="1_lko6j"]
+[ext_resource type="Texture2D" uid="uid://cnyoy4fvjgsdg" path="res://assets/Items/40 Random Items/Injector.png" id="2_pj44p"]
+
+[resource]
+script = ExtResource("1_lko6j")
+name = "Syringe"
+sprite = ExtResource("2_pj44p")
+texts = Array[String](["A medical grade syringe, filled to the brim with morphine", "One jab couldn't hurt right?", "Right?", "Riiiiiihhhttt??", "*Injects*", "Hmmmffffrrphhh"])
+isObjective = false
+metadata/_custom_type_script = "uid://daux24l4gjfs4"
