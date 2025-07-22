@@ -1,21 +1,22 @@
-extends Node2D
+extends CanvasLayer
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Player.get_node("ingame_ui/timer").start()
-	
-	if ItemManager.pieces > 0:
-		$Pieces.queue_free()
-	
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
-	if Input.is_action_just_pressed("pause"):
-		$PauseMenu.visible = true
-		get_tree().paused = true
-	
 	pass
+
+
+func _on_button_pressed() -> void:
+	visible = false 
+	get_tree().paused = false
+	pass # Replace with function body.
+
+
+func _on_quit_pressed() -> void:
+	get_tree().quit()
+	pass # Replace with function body.

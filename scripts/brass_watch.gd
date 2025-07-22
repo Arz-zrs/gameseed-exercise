@@ -11,6 +11,7 @@ func _ready() -> void:
 
 func action() -> void:
 	# Pause game timer and start freeze timer
+<<<<<<< HEAD:scripts/component/brass_watch.gd
 <<<<<<< Updated upstream:scripts/component/brass_watch.gd
 	$"../timer".paused = true
 	$duration.start()
@@ -22,18 +23,19 @@ func action() -> void:
 		$duration.start()
 		battery -= 1
 >>>>>>> Stashed changes:script/brass_watch.gd
+=======
+	$"../ingame_ui/timer".paused = true
+	$duration.start()
+>>>>>>> parent of 82663db (Merge pull request #7 from Gunturadhtya/cleaning-code):scripts/brass_watch.gd
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Freeze Trigger
 	if(event.is_action_pressed("use") and $duration.is_stopped() == true):
 		action()
 
-
 func _on_duration_timeout() -> void:
 	# Resume game timer
-	$CanvasLayer.visible = false
-	$"../timer".paused = false
-	
+	$"../ingame_ui/timer".paused = false
 
 func _process(delta: float) -> void:
 	# Display remaining frozen time
