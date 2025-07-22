@@ -9,7 +9,6 @@ autostart = true
 script = ExtResource("1_srplv")
 
 [node name="Label" type="Label" parent="."]
-visible = false
 texture_filter = 2
 offset_right = 177.0
 offset_bottom = 53.0
