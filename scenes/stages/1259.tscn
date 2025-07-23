@@ -1,10 +1,16 @@
-[gd_scene load_steps=8 format=4 uid="uid://1qxi58usgg3m"]
+[gd_scene load_steps=14 format=4 uid="uid://1qxi58usgg3m"]
 
-[ext_resource type="Script" uid="uid://dphglphfq3cs6" path="res://scripts/1259.gd" id="1_6y46x"]
+[ext_resource type="Script" path="res://scripts/1259.gd" id="1_6y46x"]
 [ext_resource type="Texture2D" uid="uid://lj1f6b38m373" path="res://assets/textures/city_demo.png" id="1_ix2oe"]
 [ext_resource type="PackedScene" uid="uid://c2gt0o6tkfjo" path="res://scenes/player/player.tscn" id="2_vd0wn"]
-[ext_resource type="Script" uid="uid://dgys7kkt45n3p" path="res://scripts/component/pause_menu.gd" id="4_48uhi"]
+[ext_resource type="Script" path="res://scripts/component/pause_menu.gd" id="4_48uhi"]
 [ext_resource type="PackedScene" uid="uid://ds5bkf4t0kixr" path="res://scenes/items/laprak_piece.tscn" id="5_mpo5v"]
+[ext_resource type="PackedScene" uid="uid://divw57bvxgm1q" path="res://scenes/general_ui.tscn" id="6_bpjrk"]
+[ext_resource type="PackedScene" uid="uid://cavtn84fq1w4e" path="res://scenes/dialog_box.tscn" id="7_gcy3b"]
+[ext_resource type="PackedScene" uid="uid://bwkr4vop26fan" path="res://scenes/items/interactable.tscn" id="8_gyq0r"]
+[ext_resource type="Resource" uid="uid://b6atohm34qnob" path="res://scripts/resource/variants/bottle.tres" id="9_3twy6"]
+[ext_resource type="Resource" uid="uid://bkr5sdulqobqi" path="res://scripts/resource/variants/food.tres" id="10_kxy2e"]
+[ext_resource type="Resource" uid="uid://ijnurh3d8l8h" path="res://scripts/resource/variants/objective_example.tres" id="11_8fn52"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vd0wn"]
 texture = ExtResource("1_ix2oe")
@@ -462,7 +468,24 @@ size_flags_vertical = 4
 text = "Quit"
 
 [node name="Pieces" parent="." instance=ExtResource("5_mpo5v")]
-position = Vector2(-16, -199)
+position = Vector2(-11, -110)
+
+[node name="general_ui" parent="." instance=ExtResource("6_bpjrk")]
+
+[node name="dialog_box" parent="general_ui" instance=ExtResource("7_gcy3b")]
+visible = false
+
+[node name="bottle" parent="." instance=ExtResource("8_gyq0r")]
+position = Vector2(-72, -27)
+resource = ExtResource("9_3twy6")
+
+[node name="syringe" parent="." instance=ExtResource("8_gyq0r")]
+position = Vector2(-52, -26)
+resource = ExtResource("10_kxy2e")
+
+[node name="objective_example" parent="." instance=ExtResource("8_gyq0r")]
+position = Vector2(-31, -28)
+resource = ExtResource("11_8fn52")
 
 [connection signal="pressed" from="PauseMenu/VBoxContainer/continue" to="PauseMenu" method="_on_button_pressed"]
 [connection signal="pressed" from="PauseMenu/VBoxContainer/quit" to="PauseMenu" method="_on_quit_pressed"]

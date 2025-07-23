@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwkr4vop26fan"]
+
+[ext_resource type="Texture2D" uid="uid://t2xvk26mwf0q" path="res://assets/Items/40 Random Items/Waffle.png" id="1_pxq75"]
+[ext_resource type="Script" path="res://scripts/component/interactable.gd" id="1_r3x3a"]
+
+[node name="interactable" type="Sprite2D"]
+texture = ExtResource("1_pxq75")
+script = ExtResource("1_r3x3a")

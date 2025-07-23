@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=3 uid="uid://c2gt0o6tkfjo"]
 
-[ext_resource type="Script" uid="uid://b6w7d10gxe2x4" path="res://scripts/player.gd" id="1_u4c7w"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_u4c7w"]
 [ext_resource type="Texture2D" uid="uid://b5qt5huyeq3bb" path="res://assets/textures/player_demo.png" id="2_6sl1v"]
 [ext_resource type="PackedScene" uid="uid://j2nhqognppyp" path="res://scenes/player/inventory_bar.tscn" id="3_hsluc"]
-[ext_resource type="Script" uid="uid://e5etceeiv2st" path="res://scripts/component/inventory.gd" id="3_p47bc"]
+[ext_resource type="Script" path="res://scripts/component/inventory.gd" id="3_p47bc"]
 [ext_resource type="PackedScene" uid="uid://b71j18u1ic1uo" path="res://scenes/timer.tscn" id="4_1q7bi"]
 
 [sub_resource type="Animation" id="Animation_qlg0r"]
@@ -87,11 +87,11 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ur7pv"]
 _data = {
-&"RESET": SubResource("Animation_qlg0r"),
-&"walk_down": SubResource("Animation_dqkch"),
-&"walk_left": SubResource("Animation_smehm"),
-&"walk_right": SubResource("Animation_fjrip"),
-&"walk_up": SubResource("Animation_tuyoq")
+"RESET": SubResource("Animation_qlg0r"),
+"walk_down": SubResource("Animation_dqkch"),
+"walk_left": SubResource("Animation_smehm"),
+"walk_right": SubResource("Animation_fjrip"),
+"walk_up": SubResource("Animation_tuyoq")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u4c7w"]
@@ -110,13 +110,14 @@ frame = 32
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_ur7pv")
+"": SubResource("AnimationLibrary_ur7pv")
 }
 
 [node name="ingame_ui" type="CanvasLayer" parent="."]
 script = ExtResource("3_p47bc")
 
 [node name="inventory_bar" parent="ingame_ui" instance=ExtResource("3_hsluc")]
+visible = false
 
 [node name="timer" parent="ingame_ui" instance=ExtResource("4_1q7bi")]
 autostart = false

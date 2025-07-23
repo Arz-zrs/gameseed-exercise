@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InteractableResource" load_steps=3 format=3 uid="uid://ijnurh3d8l8h"]
+
+[ext_resource type="Script" path="res://scripts/resource/interactable.gd" id="1_gy1um"]
+[ext_resource type="Texture2D" uid="uid://blycyc7alw3vj" path="res://assets/Items/40 Random Items/IdCard.png" id="2_j1xck"]
+
+[resource]
+script = ExtResource("1_gy1um")
+name = "idk"
+sprite = ExtResource("2_j1xck")
+texts = Array[String]([])
+isObjective = true
